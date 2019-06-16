@@ -5,7 +5,8 @@
       <%end%>
 
     <%= form_for @comment do |f| %>
-    <%= f.collection_select :user_id, User.all, :id, :username, include_blank: "Create New"%>
     <%= f.text_field :content %>
+    <%= f.collection_select :user_id, User.all, :id, :username, include_blank: "Create New"%>
+  
     <%= f.submit %>
   <% end %>
