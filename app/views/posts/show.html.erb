@@ -7,7 +7,7 @@
 </ul>
 
     <%= form_for @comment do |f| %>
-    <%= f.label "Your Comment"%>
+    <%= f.label "Your comment:"%>
     <%= f.text_area :content %>
     <%= f.collection_select :user_id, User.all, :id, :username, include_blank: "Create New User" %>
       <%= f.fields_for :user_attributes, @comment.user do |user_fields| %><br>
