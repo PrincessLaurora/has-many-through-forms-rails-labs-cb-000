@@ -18,5 +18,10 @@
   <li><%=comment.user.username%> commented: <%= comment.content%></li>
       <%end%>
 </ul>      
-  
-  
+
+<h2>Who commented:</h2>  
+<ul>
+<% @post.users.uniq.each do |user| %>
+<li><%= link_to user.username, user_path(user) %></li>
+<% end %>
+</ul>
