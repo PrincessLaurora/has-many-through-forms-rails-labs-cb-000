@@ -11,10 +11,10 @@
     <%= f.text_area :content %>
     <%= f.collection_select :user_id, User.all, :id, :username, include_blank: "Create New User" %>
       <%= f.fields_for :user_attributes, @comment.user do |user_fields| %>
-      <%= user_fields.text_field :username %><br>
+      <%= user_fields.text_field :username %><br><br>
   <% end %>
   <%= f.hidden_field :post_id, value: @post.id %>
-  <%= f.submit :content, value: "Create Comment" %><br>
+  <%= f.submit :content, value: "Create Comment" %>
 <% end %>
 
 <ul>
