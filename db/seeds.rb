@@ -7,4 +7,4 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 category = Category.create([{ name: 'Balle'}, {name: 'Non cagate'}, {name: 'Semi cagate'}])
- 
+user = User.create([{ name: 'Roberto Balle'}, {name: 'Pibirizziri'}, {name: 'Roberto Gaggio'}])
