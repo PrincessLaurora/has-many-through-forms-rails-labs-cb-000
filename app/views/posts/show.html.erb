@@ -1,8 +1,6 @@
 <h1><%=@post.title%></h1>
 <h2><%=@post.content%></h2>
-<%@post.comments.each do |comment|%>
-  <li><%=comment.content%>
-      <%end%>
+
 
     <%= form_for @comment do |f| %>
     <%=
@@ -14,5 +12,11 @@
   <%= f.hidden_field :post_id, value: @post.id %>
   <%= f.submit %>
 <% end %>
+
+<ul>
+<%@post.comments.each do |comment|%>
+  <li><%=comment.user.username%> commented: <%= comment.content%></li>
+      <%end%>
+</ul>      
   
   
