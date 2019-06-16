@@ -1,7 +1,11 @@
 <h1><%=@post.title%></h1>
 <h2><%=@post.content%></h2>
-
-
+<ul>
+  <%@post.categories.each do |category|%>
+  <li><%=category.name%></li>
+  <%end%>
+</ul>
+    
     <%= form_for @comment do |f| %>
     <%= f.label "Content"%>
     <%= f.text_field :content %>
