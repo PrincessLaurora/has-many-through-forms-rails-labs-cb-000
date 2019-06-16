@@ -5,7 +5,7 @@
   <li><%=category.name%></li>
   <%end%>
 </ul>
-    
+
     <%= form_for @comment do |f| %>
     <%= f.label "Content"%>
     <%= f.text_field :content %>
@@ -21,7 +21,7 @@
 <%@post.comments.each do |comment|%>
   <li><%=comment.user.username%> commented: <%= comment.content%></li>
       <%end%>
-</ul>      
+</ul>
 
 <h2>See who has commented:</h2>  
 <ul>
